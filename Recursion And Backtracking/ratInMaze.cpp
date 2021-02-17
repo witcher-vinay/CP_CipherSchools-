@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int possibleMoves = 4;
+int possMoves = 4;
 int xMoves[] = {1, -1, 0, 0};
 int yMoves[] = {0, 0, 1, -1};
 bool isSafe(vector<vector<bool>> &maze, vector<vector<bool>> &visited, int r, int c, int R, int C)
@@ -19,7 +19,7 @@ bool ratHelper(vector<vector<bool>> &maze, vector<vector<bool>> &visited, int r,
     if (isSafe(maze, visited, r, c, R, C))
     {
         visited[r][c] = true;
-        for (int i = 0; i < possibleMoves; i++)
+        for (int i = 0; i < possMoves; i++)
         {
             int nextXMove = r + xMoves[i];
             int nextYMove = c + yMoves[i];
