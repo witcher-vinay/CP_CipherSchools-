@@ -109,7 +109,7 @@ int main()
     result.printList();
     for (int i = 1; i <= 10; i++)
     {
-        sll.insertAtBeginning(i);
+        result.insertAtBeginning(i);
     }
     result.reverse(3);
     result.printList();
