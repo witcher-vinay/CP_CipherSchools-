@@ -47,7 +47,6 @@ Node * rearrange(Node * head) {
     Node *ptr = head, *next = NULL, *prev = NULL;
     Node dummy;
     Node *even = &dummy;
-    // bool isOdd = true;
     while (ptr != NULL) {
         prev = ptr;
         next = ptr->next;
