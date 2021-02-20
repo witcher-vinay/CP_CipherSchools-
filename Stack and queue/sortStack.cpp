@@ -1,41 +1,41 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void insertAtRightPlace(stack<int> &S, int temp)
+void insertAtRightPlace(stack<int> &Stac, int temp)
 {
-    if (S.empty() || S.top() <= temp)
+    if (Stac.empty() || Stac.top() <= temp)
     {
-        S.push(temp);
+        Stac.push(temp);
     }
     else
     {
-        int temp1 = S.top();
-        S.pop();
-        insertAtRightPlace(S, temp);
-        S.push(temp1);
+        int temp1 = Stac.top();
+        Stac.pop();
+        insertAtRightPlace(Stac, temp);
+        Stac.push(temp1);
     }
 }
 
-void reverseStack(stack<int> &S)
+void reverseStack(stack<int> &Stac)
 {
-    if (!S.empty())
+    if (!Stac.empty())
     {
-        int temp = S.top();
-        S.pop();
-        reverseStack(S);
-        insertAtRightPlace(S, temp);
+        int temp = Stac.top();
+        Stac.pop();
+        reverseStack(Stac);
+        insertAtRightPlace(Stac, temp);
     }
 }
 int main()
 {
-    stack<int> S;
+    stack<int> Stac;
     for (int i = 0; i < 5; i++)
-        S.push(i + 1);
-    reverseStack(S);
-    while (!S.empty())
+        Stac.push(i + 1);
+    reverseStack(Stac);
+    while (!Stac.empty())
     {
-        cout << S.top() << " ";
-        S.pop();
+        cout << Stac.top() << " ";
+        Stac.pop();
     }
     return 0;
 }
